@@ -13,10 +13,10 @@
 			<legend>Dados do produto</legend>
 			<h:panelGrid columns="2">
 				<h:outputLabel value="Nome do produto: " for="produto" />
-				<h:inputText id="produto" />
-				<h:outputLabel value="Valor unitário: " for="valorUnitario" />
-				<h:inputText id="valorUnitario" />
-				<h:commandButton value="Gravar" />
+				<h:inputText id="produto" value="#{produtoBean.produto.nome}" />
+				<h:outputLabel value="Valor unitário: " for="vlUnitario" />
+				<h:inputText id="valorUnitario" value="#{produtoBean.produto.vlUnitario}" />
+				<h:commandButton value="Gravar" action="#{produtoBean.gravar}" />
 			</h:panelGrid>
 		</fieldset>
 	</h:form>
